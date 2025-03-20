@@ -21,7 +21,7 @@ public class FlatAccountDTO {
     private UUID customerId;
     @NotNull(message = "Initial credit must not be null")
     @DecimalMin(value = "0.0", inclusive = false)
-    @Digits(integer=4, fraction=2)
+    @Digits(integer=38, fraction=2)
     private BigDecimal initialCredit;
 
 }

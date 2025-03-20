@@ -6,8 +6,13 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.CascadeType;
+import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
 import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
@@ -22,6 +27,7 @@ import java.util.List;
 @SuperBuilder
 public class Account extends BaseDBO {
     @NotNull
+    @DecimalMin(value = "0.0", inclusive = false)
     private BigDecimal balance;
 
     private AccountType type;

@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 public class TransactionDTO extends BaseDTO<TransactionDTO> {
     @NotNull(message = "Amount must not be null")
     @DecimalMin(value = "0.0", inclusive = false)
-    @Digits(integer=4, fraction=2)
+    @Digits(integer=38, fraction=2)
     private BigDecimal amount;
 
     private AccountDTO account;
