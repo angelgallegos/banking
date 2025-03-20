@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("account")
+@RequestMapping("/account")
 @RequiredArgsConstructor
 public class AccountController {
     private final AccountService accountService;

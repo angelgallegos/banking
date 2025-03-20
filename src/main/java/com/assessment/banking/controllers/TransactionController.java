@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("transaction")
+@RequestMapping("/transaction")
 @RequiredArgsConstructor
 public class TransactionController {
 
