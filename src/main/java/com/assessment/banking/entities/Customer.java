@@ -24,10 +24,10 @@ import java.util.Set;
 @SuperBuilder
 public class Customer extends BaseDBO {
 
-    @NotBlank(message = "Title is mandatory")
+    @NotBlank(message = "Name is mandatory")
     private String name;
 
-    @NotBlank(message = "Title is mandatory")
+    @NotBlank(message = "Surname is mandatory")
     private String surname;
 
     @OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
